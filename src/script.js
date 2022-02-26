@@ -6,24 +6,88 @@ const success = document.getElementById('success');
 const checkmark = document.getElementById('checkmark');
 const calcular = document.getElementById('calcular');
 
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+
 $("#formulario").submit(function (e) {
-  console.log(e);
+
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
   return false;
 });
 
 function calcularMediaParaSerRetirados(e) {
   mediaParaSerRetirados.innerText = 'Total para bater a meta: ' + Math.floor((Number(e.target.value) * 70) / 100);
-  if (document.getElementById('retirados').value == '') return;
-  else calcularMediaRetirados(document.getElementById('retirados').value);
+  if (Number(document.getElementById('retirados').value) < 0) return console.clear();;
+  else calcularMediaRetirados(Number(document.getElementById('retirados').value));
+
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
 }
 
 function calcularMediaRetirados(e) {
-  const valor = document.getElementById('retirados').value || e.target?.value
-  if (( valor * 100) / total.value == Infinity || (valor * 100) / total.value == NaN) {
+  const valor = Number(document.getElementById('retirados').value) || e.target?.value
+  if ((valor * 100) / total.value === Infinity || Number(valor) < 0) {
     mediaRetirados.style.color = 'red';
     mediaRetirados.style.animation = 'flicker 1.5s infinite alternate';
+
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
+    console.clear();
     return mediaRetirados.innerText = 'Algo está errado!';
   }
+
 
   mediaRetirados.innerText = `${((Number(valor) * 100) / total.value).toFixed(2)}% retirados`;
   mediaRetirados.style.color = 'black';
@@ -38,7 +102,39 @@ function calcularMediaRetirados(e) {
     checkmark.style.width = '0px';
     checkmark.style.height = '0px';
   }
+
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
+  console.clear();
 }
 
 total.addEventListener('input', calcularMediaParaSerRetirados);
 retirados.addEventListener('input', calcularMediaRetirados);
+
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
+console.clear();
