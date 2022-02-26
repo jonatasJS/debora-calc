@@ -16,7 +16,7 @@ function calcularMediaParaSerRetirados(e) {
 }
 function calcularMediaRetirados(e) {
   mediaRetirados.innerText = `${((Number(e.target.value) * 100) / total.value).toFixed(2)}% retirados`;
-  if (((Number(e.target.value) * 100) / total.value) >= 69) {
+  if (((Number(e.target.value) * 100) / total.value) >= 70) {
     success.style.opacity = '1';
     checkmark.style.width = '100px';
     checkmark.style.height = '100px';
