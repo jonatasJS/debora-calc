@@ -13,7 +13,6 @@ $("#formulario").submit(function (e) {
 
 function calcularMediaParaSerRetirados(e) {
   mediaParaSerRetirados.innerText = 'Total para bater a meta: ' + Math.floor((Number(e.target.value) * 70) / 100);
-  console.log(retirados)
   if (document.getElementById('retirados').value == '') return;
   else calcularMediaRetirados(document.getElementById('retirados').value);
 }
