@@ -17,7 +17,7 @@ function calcularMediaParaSerRetirados(e) {
 }
 
 function calcularMediaRetirados(e) {
-  const valor = Number(document.getElementById('retirados').value) || e.target?.value
+  const valor = Number(document.getElementById('retirados').value) || e.target?.value || 0
   if ((valor * 100) / total.value === Infinity || Number(valor) < 0) {
     mediaRetirados.style.color = 'red';
     mediaRetirados.style.animation = 'flicker 1.5s infinite alternate';
@@ -34,7 +34,7 @@ function calcularMediaRetirados(e) {
     checkmark.style.width = '100px';
     checkmark.style.height = '100px';
   }
-  if (((Number(valor) * 100) / total.value) <= 69) {
+  if (((Number(valor) * 100) / total.value) <= 74) {
     success.style.opacity = '0';
     checkmark.style.width = '0px';
     checkmark.style.height = '0px';
