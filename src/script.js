@@ -11,7 +11,7 @@ $("#formulario").submit(function (e) {
 });
 
 function calcularMediaParaSerRetirados(e) {
-  mediaParaSerRetirados.innerText = 'Total para bater a meta: ' + Math.floor((Number(e.target.value) * 70) / 100);
+  mediaParaSerRetirados.innerText = 'Total para bater a meta: ' + Math.floor((Number(e.target.value) * 75) / 100);
   if (Number(document.getElementById('retirados').value) < 0) return console.clear();
   else calcularMediaRetirados(Number(document.getElementById('retirados').value));
 }
@@ -21,7 +21,7 @@ function calcularMediaRetirados(e) {
   if ((valor * 100) / total.value === Infinity || Number(valor) < 0) {
     mediaRetirados.style.color = 'red';
     mediaRetirados.style.animation = 'flicker 1.5s infinite alternate';
-    
+
     return mediaRetirados.innerText = 'Algo está errado!';
   }
 
@@ -29,7 +29,7 @@ function calcularMediaRetirados(e) {
   mediaRetirados.innerText = `${((Number(valor) * 100) / total.value).toFixed(2)}% retirados`;
   mediaRetirados.style.color = 'black';
   mediaRetirados.style.animation = '';
-  if (((Number(valor) * 100) / total.value) >= 70) {
+  if (((Number(valor) * 100) / total.value) >= 75) {
     success.style.opacity = '1';
     checkmark.style.width = '100px';
     checkmark.style.height = '100px';
