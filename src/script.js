@@ -22,9 +22,8 @@ function calcularMediaRetirados(e) {
     mediaRetirados.style.color = 'red';
     mediaRetirados.style.animation = 'flicker 1.5s infinite alternate';
 
-    return mediaRetirados.innerText = 'Algo está errado!';
+    return mediaRetirados.innerText = 'Algo está errado! ';
   }
-
 
   mediaRetirados.innerText = `${((Number(valor) * 100) / total.value).toFixed(2)}% retirados`;
   mediaRetirados.style.color = 'black';
